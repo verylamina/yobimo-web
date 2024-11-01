@@ -60,8 +60,6 @@ body {
 @keyframes welcomeTitleAnim {
     from {opacity: 0%;}
     to {opacity: 100%;}
-
-    
 }
 
 #welcomeTitle {
@@ -123,9 +121,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    min-width: 800px;
-    margin: 30px;
+    
+    margin: auto;
+    width: 600px;
 }
 
 #optionButton {
@@ -214,4 +212,52 @@ body {
     width: 130px;
 
     margin: 20px;
+}
+
+#copyrightReportContainer {
+    position: center;
+
+    margin: autopx;
+    width: 100%;
+}
+
+#subtitleBelow {
+    margin: auto;
+    width: 80%;
+
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    text-align: center;
+
+    opacity: 0%;
+
+    animation-fill-mode: forwards;
+    animation-name: optionsTextAnim;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 1s;
+}
+
+#labelpolicyContainer {
+    margin: auto;
+    width: 80%;
+
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+
+    opacity: 0%;
+
+    animation-fill-mode: forwards;
+    animation-name: optionsTextAnim;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-delay: .5s;
 }
