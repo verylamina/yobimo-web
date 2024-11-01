@@ -1,0 +1,46 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat);
+
+/* Header */
+
+body {
+    background-image: url(assets/sub-bg1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+
+#header {
+    position: center;
+    color: #ffffff;
+    min-width: 800px;
+    margin: 30px;
+
+    border: 1px solid #ffffff;
+    border-color: rgba(255, 255, 255, 0.322);
+    border-radius: 50px;
+    border-width: 2px;
+
+    backdrop-filter: blur(16px);
+}
+
+#logoText {
+    margin-left: 40px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 35px;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+
+#infoButton {
+    float: right;
+    margin-right: 40px;
+    margin-top: 13px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
