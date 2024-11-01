@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Welcome to Yobimo
+        </title>
+        <link rel = "stylesheet" href = "styles.css">
+        <script src="https://cdn.jsdelivr.net/npm/showdown@1.9.1/dist/showdown.min.js">
+            
+        </script>
+
+
+    </head>
+
+    <body>
+
+        <div id = "headerImage"></div>
+
+            <div id = "header">
+                <p>
+
+                    <div id = "yobimoLogo">
+                        <img id = "ybmHeader" src = "assets/yobimo/Yobimo Logo.png">
+                    </div>
+                    <span id = "logoText">
+                        Yobimo Entertainment
+                    </span>
+
+                    <span id = "infoButton">
+                        <a style = "text-decoration:none" href = "index.html">
+                            Home
+                    </a>
+                     | 
+                     <a style = "text-decoration:none" href = "about.html">
+                        About
+                    </a>
+                     | 
+                    </a>
+                    <a style = "text-decoration:none" href = "https://github.com/verylamina/yobimo-web">
+                       Github
+                   </a>
+                    </span>
+                </p>
+            </div>
+
+            <br>
+            <br>
+            
+            <div id = "welcomeTitle">
+                <p>
+                    Contact List
+                </p>
+            </div>
+
+            <hr id = "line1">
+
+            <br> 
+
+            <div id ="markdownContainer">
+
+            </div>
+
+                <script>
+                    async function loadReadme() {
+                    const response = await fetch('contactlist.md');
+                    const markdown = await response.text();
+                
+                    const converter = new showdown.Converter();
+                    const htmlContent = converter.makeHtml(markdown);
+                
+                    document.getElementById('markdownContainer').innerHTML = htmlContent;
+                }
+                
+                window.onload = loadReadme;
+                </script>
+    </body>
+</html>

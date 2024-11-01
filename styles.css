@@ -23,20 +23,33 @@ a {
     width: 70px;
 }
 
+#introPlayer {
+    text-align: center;
+}
+
 #header {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(90% - 60px);
+    height: calc(13% - 60px);
+    max-width: 1000px;
+    z-index: 1000; 
+
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: #ffffff;
-    min-width: 800px;
-    margin: 30px;
 
-    border: 1px solid #ffffff;
-    border-color: rgba(255, 255, 255, 0.322);
+    padding: 20px 30px;
+    background-color: #00000067;
+    color: #ffffff;
+
+    border: 1px solid rgba(255, 255, 255, 0.322);
     border-radius: 50px;
     border-width: 2px;
 
-    backdrop-filter: blur(16px);
+    backdrop-filter: blur(10px);
 }
 
 #logoText {
@@ -66,9 +79,30 @@ a {
     to {opacity: 100%;}
 }
 
-#welcomeTitle {
+#subtitle {
+    margin: auto;
+    width: 90%;
+
     color: #ffffff;
-    margin: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    text-align: center;
+
+    opacity: 0%;
+    animation-fill-mode: forwards;
+    animation-name: welcomeTitleAnim;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-delay: 1.5s;
+
+}
+
+#welcomeTitle {
+    padding-top: 10%;
+    color: #ffffff;
 
     animation-fill-mode: forwards;
     animation-name: welcomeTitleAnim;
@@ -121,6 +155,11 @@ a {
     animation-delay: 1s;
 }
 
+@keyframes optionButtonAnim {
+    from {scale: 50%; opacity: 0%;}
+    to {scale: 100%; opacity: 100%;}
+}
+
 #optionsContainer {
     display: flex;
     align-items: center;
@@ -140,58 +179,18 @@ a {
 
     box-shadow: 0px 0px 10px #ffffff00;
 
+    opacity: 100%;
     scale: 100%;
+
+    animation-name: optionButtonAnim;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
 
     transition: 0.5s;
 }
 
 #optionButton:hover {
-    background-color: #ffffff3d;
-
-    box-shadow: 0px 0px 10px #ffffff56;
-
-    scale: 105%;
-}
-
-#optionButton2 {
-    border: 1px solid #ffffff;
-    border-color: rgba(255, 255, 255, 0.322);
-    border-radius: 10px;
-    border-width: 2px;
-
-    background-color: #ffffff00;
-
-    box-shadow: 0px 0px 10px #ffffff00;
-
-    scale: 100%;
-
-    transition: 0.5s;
-}
-
-#optionButton2:hover {
-    background-color: #ffffff3d;
-
-    box-shadow: 0px 0px 10px #ffffff56;
-
-    scale: 105%;
-}
-
-#optionButton3 {
-    border: 1px solid #ffffff;
-    border-color: rgba(255, 255, 255, 0.322);
-    border-radius: 10px;
-    border-width: 2px;
-
-    background-color: #ffffff00;
-
-    box-shadow: 0px 0px 10px #ffffff00;
-
-    scale: 100%;
-
-    transition: 0.5s;
-}
-
-#optionButton3:hover {
     background-color: #ffffff3d;
 
     box-shadow: 0px 0px 10px #ffffff56;
@@ -218,7 +217,7 @@ a {
     margin: 20px;
 }
 
-#copyrightReportContainer {
+#ReportContainer {
     text-align: center;
     background-color: #ffffff10;
 
