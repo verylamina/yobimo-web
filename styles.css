@@ -118,3 +118,100 @@ body {
     animation-timing-function: ease-out;
     animation-delay: 1s;
 }
+
+#optionsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-width: 800px;
+    margin: 30px;
+}
+
+#optionButton {
+    border: 1px solid #ffffff;
+    border-color: rgba(255, 255, 255, 0.322);
+    border-radius: 10px;
+    border-width: 2px;
+
+    background-color: #ffffff00;
+
+    box-shadow: 0px 0px 10px #ffffff00;
+
+    scale: 100%;
+
+    transition: 0.5s;
+}
+
+#optionButton:hover {
+    background-color: #ffffff3d;
+
+    box-shadow: 0px 0px 10px #ffffff56;
+
+    scale: 105%;
+}
+
+#optionButton2 {
+    border: 1px solid #ffffff;
+    border-color: rgba(255, 255, 255, 0.322);
+    border-radius: 10px;
+    border-width: 2px;
+
+    background-color: #ffffff00;
+
+    box-shadow: 0px 0px 10px #ffffff00;
+
+    scale: 100%;
+
+    transition: 0.5s;
+}
+
+#optionButton2:hover {
+    background-color: #ffffff3d;
+
+    box-shadow: 0px 0px 10px #ffffff56;
+
+    scale: 105%;
+}
+
+#optionButton3 {
+    border: 1px solid #ffffff;
+    border-color: rgba(255, 255, 255, 0.322);
+    border-radius: 10px;
+    border-width: 2px;
+
+    background-color: #ffffff00;
+
+    box-shadow: 0px 0px 10px #ffffff00;
+
+    scale: 100%;
+
+    transition: 0.5s;
+}
+
+#optionButton3:hover {
+    background-color: #ffffff3d;
+
+    box-shadow: 0px 0px 10px #ffffff56;
+
+    scale: 105%;
+}
+
+#optionText {
+    color: #ffffff;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 17px;
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    text-align: center;
+
+    margin: 10px;
+}
+
+#optionIcon {
+    filter: brightness(0) invert(1);
+    width: 130px;
+
+    margin: 20px;
+}
