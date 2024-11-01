@@ -5,6 +5,10 @@
             Welcome to Yobimo
         </title>
         <link rel = "stylesheet" href = "styles.css">
+        <script src="https://cdn.jsdelivr.net/npm/showdown@1.9.1/dist/showdown.min.js">
+            
+        </script>
+
 
     </head>
 
@@ -44,7 +48,7 @@
             
             <div id = "welcomeTitle">
                 <p>
-                    Copyright Report
+                    About Us
                 </p>
             </div>
 
@@ -52,17 +56,21 @@
 
             <br> 
 
-            <div id = "subtitleBelow">
-                <p>
-                    If you want to report a material that you think is violating our label policy or is stolen, don't hesitate to contact our
-                    staff through our email (staff.yobimo@gmail.com) or you can submit a report here via Google Forms.
-                </p>
+            <div id ="markdownContainer">
             </div>
-
-            <br>
-
-            <div id = "copyrightReportContainer">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd1ARxbFLiYjufrS_7vs96JSTJbgStgmS35xx53tJgqx6eRSA/viewform?embedded=true" width="640" height="689">Loading…</iframe>
-            </div>
+            
+                <script>
+                    async function loadReadme() {
+                    const response = await fetch('aboutyobimo.md');
+                    const markdown = await response.text();
+                
+                    const converter = new showdown.Converter();
+                    const htmlContent = converter.makeHtml(markdown);
+                
+                    document.getElementById('markdownContainer').innerHTML = htmlContent;
+                }
+                
+                window.onload = loadReadme;
+                </script>
     </body>
 </html>

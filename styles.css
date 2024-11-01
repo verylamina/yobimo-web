@@ -11,6 +11,10 @@ body {
     
 }
 
+a {
+    color: inherit;
+}
+
 #yobimoLogo {
     margin: 25px;
 }
@@ -215,10 +219,13 @@ body {
 }
 
 #copyrightReportContainer {
-    position: center;
+    text-align: center;
+    background-color: #ffffff10;
 
-    margin: autopx;
-    width: 100%;
+    border: 1px solid #ffffff;
+    border-color: rgba(255, 255, 255, 0.322);
+    border-radius: 10px;
+    border-width: 2px;
 }
 
 #subtitleBelow {
@@ -242,7 +249,7 @@ body {
     animation-delay: 1s;
 }
 
-#labelpolicyContainer {
+#markdownContainer {
     margin: auto;
     width: 80%;
 

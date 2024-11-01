@@ -27,7 +27,18 @@
                     </span>
 
                     <span id = "infoButton">
-                        Submit | About | Github
+                        <a style = "text-decoration:none" href = "index.html">
+                            Home
+                    </a>
+                     | 
+                     <a style = "text-decoration:none" href = "about.html">
+                        About
+                    </a>
+                     | 
+                    </a>
+                    <a style = "text-decoration:none" href = "https://github.com/verylamina/yobimo-web">
+                       Github
+                   </a>
                     </span>
                 </p>
             </div>
@@ -45,9 +56,10 @@
 
             <br> 
 
-            <div id ="labelpolicyContainer">
+            <div id ="markdownContainer">
+
             </div>
-            
+
                 <script>
                     async function loadReadme() {
                     const response = await fetch('yobimopolicy.md');
@@ -56,7 +68,7 @@
                     const converter = new showdown.Converter();
                     const htmlContent = converter.makeHtml(markdown);
                 
-                    document.getElementById('labelpolicyContainer').innerHTML = htmlContent;
+                    document.getElementById('markdownContainer').innerHTML = htmlContent;
                 }
                 
                 window.onload = loadReadme;
