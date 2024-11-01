@@ -217,6 +217,48 @@ a {
     margin: 20px;
 }
 
+#footer {
+    margin: auto;
+    width: 800px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #00000062;
+    border: 1px solid rgba(255, 255, 255, 0.322);
+    border-radius: 50px;
+    border-width: 2px;
+
+    backdrop-filter: blur(10px);
+}
+
+#ftLeftAlign {
+    margin: 2%;
+    float: left;
+
+    color: #ffffff;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+
+#ftRightAlign {
+    margin: 2%;
+    float: right;
+
+    color: #ffffff;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+
 #ReportContainer {
     text-align: center;
     background-color: #ffffff10;
