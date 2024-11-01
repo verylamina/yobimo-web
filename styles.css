@@ -44,3 +44,43 @@ body {
     font-weight: 100;
     font-style: normal;
 }
+
+@keyframes welcomeTitleAnim {
+    from {opacity: 0%;}
+    to {opacity: 100%;}
+
+    
+}
+
+#welcomeTitle {
+    position: center;
+    color: #ffffff;
+    margin: 10px;
+
+    animation-fill-mode: forwards;
+    animation-name: welcomeTitleAnim;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 50px;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    text-align: center;
+}
+
+@keyframes line1Animwidth {
+    from {width: 1%; opacity: 0%;}
+    to {width: 90%; opacity: 100%;}
+}
+
+#line1 {
+    width: 0%;
+    opacity: 0%;
+
+    animation-fill-mode: forwards;
+    animation-name: line1Animwidth;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0.3s;
+}
