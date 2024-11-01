@@ -11,8 +11,18 @@ body {
     
 }
 
+#yobimoLogo {
+    margin: 25px;
+}
+
+#ybmHeader {
+    width: 70px;
+}
+
 #header {
-    position: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     color: #ffffff;
     min-width: 800px;
     margin: 30px;
@@ -26,18 +36,20 @@ body {
 }
 
 #logoText {
-    margin-left: 40px;
+    margin-right: auto;
+
+    float: left;
     font-family: "Montserrat", sans-serif;
-    font-size: 35px;
+    font-size: 25px;
     font-optical-sizing: auto;
     font-weight: 900;
     font-style: normal;
 }
 
 #infoButton {
+    display: block;
     float: right;
     margin-right: 40px;
-    margin-top: 13px;
     font-family: "Montserrat", sans-serif;
     font-size: 15px;
     font-optical-sizing: auto;
@@ -53,7 +65,6 @@ body {
 }
 
 #welcomeTitle {
-    position: center;
     color: #ffffff;
     margin: 10px;
 
@@ -65,7 +76,7 @@ body {
     font-family: "Montserrat", sans-serif;
     font-size: 50px;
     font-optical-sizing: auto;
-    font-weight: 900;
+    font-weight: bolder;
     text-align: center;
 }
 
@@ -83,4 +94,27 @@ body {
     animation-duration: 1.5s;
     animation-timing-function: ease-out;
     animation-delay: 0.3s;
+}
+
+@keyframes optionsTextAnim {
+    from {opacity: 0%;}
+    to {opacity: 100%;}
+}
+
+#optionsText {
+    color: #ffffff;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 25px;
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    text-align: center;
+
+    opacity: 0%;
+
+    animation-fill-mode: forwards;
+    animation-name: optionsTextAnim;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 1s;
 }
