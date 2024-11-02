@@ -34,6 +34,8 @@ a {
     transform: translateX(-50%);
     width: calc(90% - 60px);
     height: calc(13% - 60px);
+    min-height: 40px;
+    max-height: 40px;
     max-width: 1000px;
     z-index: 1000; 
 
@@ -308,4 +310,61 @@ a {
     animation-duration: 1.5s;
     animation-timing-function: ease-out;
     animation-delay: .5s;
+}
+
+#container {
+    width: 80%;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    margin: 20px auto;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+
+.progress-container {
+    position: center;
+    text-align: center;
+    font-family: Montserrat;
+    font-weight: bolder;
+    color: white;
+
+    margin: auto;
+    max-width: 70%;
+    background-color: #0000007a;
+
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+}
+.progress-bar {
+    height: 30px;
+    background-color: #525252;
+    text-align: center;
+    color: white;
+
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50px;
+
+    margin: 3%;
+}
+
+#entryText1, #entryText2, #entryText3, #entryText4 {
+    font-family: Montserrat;
+    text-align: center;
+    color: white;
+    line-height: 30px;
+    transition: width 0.5s ease;
+}
+
+#progressStatus1, #progressStatus2, #progressStatus3, #progressStatus4 {
+    position: center;
+    text-align: center;
+    font-family: Montserrat;
+    font-weight: bolder;
+    color: white;
+
+    margin: auto;
+    max-width: 20%;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50px;
+    background-color: #000000;
 }
