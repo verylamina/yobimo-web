@@ -57,7 +57,9 @@
             <br> 
 
             <div id ="markdownContainer">
+                <div id = "markdownText">
 
+                </div>
             </div>
 
                 <script>
@@ -68,10 +70,83 @@
                     const converter = new showdown.Converter();
                     const htmlContent = converter.makeHtml(markdown);
                 
-                    document.getElementById('markdownContainer').innerHTML = htmlContent;
+                    document.getElementById('markdownText').innerHTML = htmlContent;
                 }
                 
                 window.onload = loadReadme;
                 </script>
+
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <h2 id = "optionsText">
+                Frequently Asked Question
+            </h2>
+            <div id = "faqSect">
+                <button class="accordion">Why do we need this?</button>
+                <div class="panel">
+                <p>
+                    Our label policy is there in general so that you know how we process your demo/tracks, how we handle distribution, what's your right as an artist or
+                    individual, revenue sharing, copyright, and other important aspects. The policy is there so that we can remain transparent, fair, and have a safe
+                    environment for all artists.
+                </p>
+                </div>
+                
+                <br>
+                <button class="accordion">Do I still have the ownership of my music?</button>
+                <div class="panel">
+                <p>Yobimo and the artist itself <b>both holds the ownership of the track.</b> But, it's important to note that artists still retain the full
+                ownership of their track, and Yobimo will be the one licensing and distribute the track on their behalf. Overall, the primary rights holder is
+                the artist
+                </p>
+                </div>
+                
+                <br>
+                <button class="accordion">Why do I need to confirm that we own the rights to my music?</button>
+                <div class="panel">
+                <p>To protect everyone's intellectual property, it is essential that track/material you submit is original or you have full permission to use it.
+                This is important to ensure we avoid any copyright disputes, as well as to protect all artists' work.
+                </p>
+                </div> 
+
+                <br>
+                <button class="accordion">Can you use my music in any other ways besides distribution?</button>
+                <div class="panel">
+                <p>Materials published under Yobimo may be used only for the sole of promotion. Yobimo will not alter, remix, or use the track outside of Yobimo's
+                    activities without the artist's explicit permission.
+                </p>
+                </div> 
+
+                <br>
+                <button class="accordion">Someone claims my material infringes their copyright</button>
+                <div class="panel">
+                <p>If a copyright dispute arises, we will notify the artist and if necessary, we will remove the material from distribution until it's resolved. However,
+                    please take note that you're responsible for resolving any disputes related to your track/material
+                </p>
+                </div> 
+
+                <br>
+                <button class="accordion">I still have a lot of questions, who do I need to contact?</button>
+                <div class="panel">
+                <p>Sure! If you have any questions or concerns about the policy, you may reach out to <b>staff.yobimo@gmail.com</b> and we're happy to clarify any details.</p>
+                </div> 
+            </div>
+
+
+            <script src = "script.js"></script>
+
+            <br>
+            <br>
+            <div id = "footer">
+                <span id = "ftLeftAlign">
+                    (C) Yobimo Multimedia Group | Made with ♡ by very.lamina
+                </span>
+
+                <span id = "ftRightAlign">
+                    Icons from <a href = "https://www.flaticon.com/">FlatIcon.</a>
+                </span>
+            </div>
     </body>
 </html>

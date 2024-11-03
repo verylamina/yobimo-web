@@ -42,10 +42,13 @@
             <br>
             <br>
             
-            <div id = "welcomeTitle">
-                <p>
-                    MUSIC, ENTERTAINMENT, ANIMATION
-                </p>
+            <div id = "mainWelcomeTitle">
+                <div id="mainWelcomeText">
+                    MUSIC/ENTERTAINMENT/ANIMATION&nbsp;MUSIC/ENTERTAINMENT/ANIMATION&nbsp;MUSIC/ENTERTAINMENT/ANIMATION&nbsp;MUSIC/ENTERTAINMENT/ANIMATION
+                </div>
+                <div id="mainWelcomeText">
+                    MUSIC/ENTERTAINMENT/ANIMATION&nbsp;MUSIC/ENTERTAINMENT/ANIMATION&nbsp;MUSIC/ENTERTAINMENT/ANIMATION&nbsp;MUSIC/ENTERTAINMENT/ANIMATION
+                </div>
             </div>
 
             <div id = "introPlayer">
@@ -114,14 +117,13 @@
             <br>
 
             <div id = "optionsContainer2">
-                <a style = "text-decoration:none" href = "https://forms.gle/H3gf8qCZMdF39aUj8">
-                    <div id = "optionButton">
+                    <div id = "optionButton" onclick="openModal()">
                         <img id = "optionIcon" src = "assets/demosub.png">
                         <p id = "optionText">
                             Submit a demo
                         </p>
                     </div>
-                </a>
+
 
                 <a style = "text-decoration:none" href = "policy.html">
                     <div id = "optionButton">
@@ -149,6 +151,7 @@
                         </p>
                     </div>
                 </a>
+                
             </div>
 
             <br>
@@ -156,6 +159,24 @@
             <br>
             <br>
 
+            <script src = "script.js">
+                
+            </script>
+
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <p>Before entering to the submission form, we recommend you to read our <a href = "policy.html"><b>label policy</b></a> first so that you're informed about how we handle distribution,
+                        rules and regulations, copyright, and other important aspects.
+
+                        <br>
+                        By proceeding, you agree to help us ensure a fair, transparent, and safe environment for all artists and that you will follow these policies.
+
+                    </p>
+                    <button id = "modalBtnConfirm" onclick="confirmSubmit()">Proceed</button>
+                    <button id = "modalBtnExit" onclick="closeModal()">Exit</button>
+                </div>
+            </div>
 
             <div id = "footer">
                 <span id = "ftLeftAlign">

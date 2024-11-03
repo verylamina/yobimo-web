@@ -1,10 +1,14 @@
 const sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSwIgd1OjBu_x9MXZu7-_hb4HLVsyhjC8Sgh2CqYiotH3XQ7-vbq31lf26okK2iYMx-4Ti9kxUZC1bd/pub?output=csv';
         
+const loadingScreen = document.getElementById('loading');
+
 async function fetchSheetData() {
     try {
         const response = await fetch(sheetUrl);
+        loadingScreen.classList.remove('hidden');
         const data = await response.text();
         const rows = data.split('\n');
+        loadingScreen.classList.add('hidden');
 
         // Fetch values from A2 to A7 (for names) and B3 to B7 (for progress values)
         const progressNames = rows.slice(2, 7).map(row => {
@@ -72,5 +76,39 @@ function updateProgressBars(names, values) {
     });
 }
 
-// Fetch data from Google Sheets and update the progress bars
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+
+
+
+function openModal() {
+    const modal = document.getElementById("myModal");
+    modal.style.display = "block";
+    setTimeout(() => {
+        modal.querySelector('.modal-content').classList.add('zoom');
+    }, 10);
+}
+
+function closeModal() {
+    const modal = document.getElementById("myModal");
+    modal.style.display = "none";
+    modal.querySelector('.modal-content').classList.remove('zoom');
+}
+
+function confirmSubmit() {
+    window.location.href = "https://forms.gle/H3gf8qCZMdF39aUj8"; // Redirect to form
+}
+
 fetchSheetData();

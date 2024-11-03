@@ -9,6 +9,11 @@
     </head>
 
     <body>
+        <div id="loading">Getting data...</div>
+    <div id="progress-bars">
+        <!-- Progress bars will be dynamically added here -->
+    </div>
+
 
         <div id = "headerImage"></div>
 
@@ -55,10 +60,15 @@
                 <div id = "subtitleBelow">
                     <br>
                     <p id = "dmpgcolor1">Dark Pale Blue - Reviewing</p>
+                    <br>
                     <p id = "dmpgcolor2">Yellow - Review Done</p>
+                    <br>
                     <p id = "dmpgcolor3">Lighter Gray - Results Out (check email)</p>
+                    <br>
                     <p id = "dmpgcolor4">Pale Sky - Artwork/MV Production</p>
+                    <br>
                     <p id = "dmpgcolor5">Purple - Distribution in progress</p>
+                    <br>
                     <p id = "dmpgcolor6">Green - Finalizing</p>
                 </div>
 
@@ -107,5 +117,41 @@
 
             <br>
             <br>
+
+            <div id = "dmoptionsContainer">
+                <div id = "dmoptionButton" onclick="openModal()">
+                    <img id = "dmoptionIcon" src = "assets/demosub.png">
+                    <span id = "dmSubmitButton">
+                        Submit a demo now!
+                    </span>
+                </div>
+            </div>
+
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <p>Before entering to the submission form, we recommend you to read our <a href = "policy.html"><b>label policy</b></a> first so that you're informed about how we handle distribution,
+                        rules and regulations, copyright, and other important aspects.
+
+                        <br>
+                        By proceeding, you agree to help us ensure a fair, transparent, and safe environment for all artists and that you will follow these policies.
+
+                    </p>
+                    <button id = "modalBtnConfirm" onclick="confirmSubmit()">Proceed</button>
+                    <button id = "modalBtnExit" onclick="closeModal()">Exit</button>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <div id = "footer">
+                <span id = "ftLeftAlign">
+                    (C) Yobimo Multimedia Group | Made with ♡ by very.lamina
+                </span>
+
+                <span id = "ftRightAlign">
+                    Icons from <a href = "https://www.flaticon.com/">FlatIcon.</a>
+                </span>
+            </div>
     </body>
 </html>

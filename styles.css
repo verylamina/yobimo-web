@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Montserrat);
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@800&display=swap');
 
 /* Header */
 
@@ -44,7 +45,7 @@ a {
     justify-content: space-between;
 
     padding: 20px 30px;
-    background-color: #00000067;
+    background-color: #000000af;
     color: #ffffff;
 
     border: 1px solid rgba(255, 255, 255, 0.322);
@@ -52,6 +53,8 @@ a {
     border-width: 2px;
 
     backdrop-filter: blur(10px);
+
+    box-shadow: 0px 0px 50px #000000;
 }
 
 #logoText {
@@ -102,6 +105,15 @@ a {
 
 }
 
+@keyframes scrollText {
+    0% {
+        transform: translateX(0); /* Start from the beginning */
+    }
+    100% {
+        transform: translateX(-100%); /* Move completely to the left */
+    }
+}
+
 #welcomeTitle {
     padding-top: 10%;
     color: #ffffff;
@@ -116,6 +128,29 @@ a {
     font-optical-sizing: auto;
     font-weight: bolder;
     text-align: center;
+}
+
+#mainWelcomeTitle {
+    padding-top: 10%;
+    padding-bottom: 5%;
+    overflow: hidden; /* Hide the overflow */
+    white-space: nowrap; /* Prevent text from wrapping */
+    display: flex; /* Align items in a row */
+    width: 100%; /* Set the width of the wrapper */
+
+    animation-fill-mode: forwards;
+    animation-name: welcomeTitleAnim;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+#mainWelcomeText {
+    display: inline-block;
+    font-family: "Syne", sans-serif;
+    font-size: 5vw; /* Responsive font size */
+    color: #ffffff;
+    padding-right: 2vw; /* Add some space between repeated text */
+    animation: scrollText 90s linear infinite;
 }
 
 @keyframes line1Animwidth {
@@ -143,7 +178,7 @@ a {
     color: #ffffff;
 
     font-family: "Montserrat", sans-serif;
-    font-size: 25px;
+    font-size: 30px;
     font-optical-sizing: auto;
     font-weight: bolder;
     text-align: center;
@@ -194,7 +229,7 @@ a {
     scale: 100%;
 
     animation-name: optionButtonAnim;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
     animation-timing-function: ease-out;
     animation-delay: 0s;
 
@@ -206,7 +241,7 @@ a {
 
     box-shadow: 0px 0px 10px #ffffff56;
 
-    scale: 105%;
+    scale: 110%;
 }
 
 #optionText {
@@ -219,6 +254,48 @@ a {
     text-align: center;
 
     margin: 10px;
+}
+
+#dmoptionsContainer {
+    display: flex;
+    justify-content: center; /* Center the button in the container */
+    align-items: center;
+    margin: auto;
+    min-width: 90%;
+    text-align: center;
+}
+
+#dmoptionButton {
+    display: flex; /* Use flex to align icon and text within the button */
+    align-items: center;
+    justify-content: center;
+    padding: 10px; /* Add padding for better spacing inside the button */
+    gap: 10px; /* Space between icon and text */
+    width: fit-content; /* Adjust width to fit content */
+    border: 2px solid rgba(255, 255, 255, 0.322);
+    border-radius: 10px;
+    background-color: transparent;
+    box-shadow: 0px 0px 10px #ffffff00;
+    transition: 0.5s;
+}
+
+#dmoptionButton:hover {
+    background-color: rgba(255, 255, 255, 0.24);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.34);
+    transform: scale(1.1); /* Smoothly scale on hover */
+}
+
+#dmSubmitButton {
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 17px;
+    font-weight: bolder;
+}
+
+#dmoptionIcon {
+    filter: brightness(0) invert(1);
+    width: 80px;
+
 }
 
 #optionIcon {
@@ -302,15 +379,21 @@ a {
 }
 
 #markdownContainer {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding: 2%;
     margin: auto;
     width: 80%;
 
     color: #ffffff;
     font-family: "Montserrat", sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     font-optical-sizing: auto;
     font-weight: 100;
     font-style: normal;
+
+    background-color: #000000ab;
+    border-radius: 10px;
 
     opacity: 0%;
 
@@ -321,6 +404,83 @@ a {
     animation-delay: .5s;
 }
 
+#markdownText {
+    margin: auto;
+    width: 80%;
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+
+    opacity: 100%;
+}
+
+#faqSect {
+    text-align: center;
+}
+
+ /* Style the buttons that are used to open and close the accordion panel */
+ .accordion {
+    padding: 10%;
+    margin: auto;
+    min-width: 80%;
+    border-radius: 10px;
+    background-color: #00000073;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 18px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .accordion:hover {
+    background-color: #53535381;
+  }
+  
+.panel {
+    padding: 0 18px;
+    margin: auto;
+    width: 90%;
+
+    border-radius: 10px;
+
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    text-align: left;
+    
+    background-color: rgba(0, 0, 0, 0.685);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.accordion:after {
+    content: '+';
+    font-size: 20px;
+    color: #ffffff;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "-";
+  }
+  
 #container {
     width: 80%;
     background-color: #e0e0e0;
@@ -346,7 +506,7 @@ a {
 }
 .progress-bar {
     height: 30px;
-    background-color: #525252;
+    background-color: #252525;
     text-align: center;
     color: white;
 
@@ -424,4 +584,138 @@ a {
     border: 1px solid rgb(255, 255, 255);
     border-radius: 50px;
     background-color: #57ae2b;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+    align-items: center;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    background-color: #fefefe;
+    border-radius: 10px;
+
+    font-family: "Montserrat";
+    font-size: 15px;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 3px solid #00000054;
+    width: 80%; /* Could be more or less, depending on screen size */
+    animation: zoomIn 0.4s forwards; /* Add animation */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#modalBtnConfirm {
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 13px;
+    color: #ffffff;
+    height: 23;
+    width: 100px;
+
+    background-color: #222e53;
+    border: 2px solid #203955;
+    border-radius: 14px;
+
+    box-shadow: 0px 0px 2px #000000;
+}
+
+#modalBtnConfirm:active {
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 13px;
+    color: #ffffff;
+    height: 23;
+    width: 100px;
+
+    background-color: #707ea7;
+    border: 2px solid #30354b;
+    border-radius: 14px;
+
+    box-shadow: 0px 0px 2px #000000;
+}
+
+#modalBtnExit {
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 13px;
+    color: #ffffff;
+    height: 23;
+    width: 100px;
+
+    background-color: #532222;
+    border: 2px solid #381313;
+    border-radius: 14px;
+
+    box-shadow: 0px 0px 2px #000000;
+}
+
+#modalBtnExit:active {
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 13px;
+    color: #ffffff;
+    height: 23;
+    width: 100px;
+
+    background-color: #a77070;
+    border: 2px solid #4b3030;
+    border-radius: 14px;
+
+    box-shadow: 0px 0px 2px #000000;
+}
+
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    font-family: "Montserrat";
+    font-weight: 900;
+    background: rgba(151, 151, 151, 0.8);
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    z-index: 1000; /* Make sure it covers everything */
+}
+#loading.hidden {
+    display: none; /* Hide loading screen when not needed */
 }
