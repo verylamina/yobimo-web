@@ -37,6 +37,14 @@ function updateProgressBars(names, values) {
         document.getElementById('progress-bar5')
     ];
 
+    const statusOutput = [
+        document.getElementById('statusText1'),
+        document.getElementById('statusText2'),
+        document.getElementById('statusText3'),
+        document.getElementById('statusText4'),
+        document.getElementById('statusText5')
+    ];
+
     const progressNames = [
         document.getElementById('progress-name1'),
         document.getElementById('progress-name2'),
@@ -49,6 +57,7 @@ function updateProgressBars(names, values) {
         const percentage = parseInt(value);
         const progressBar = progressBars[index];
         const progressName = progressNames[index];
+        const statusText = statusOutput[index];
 
         // Set progress bar width and text
         progressBar.style.width = `${percentage}%`;
@@ -57,41 +66,31 @@ function updateProgressBars(names, values) {
         // Set the name of the progress bar
         progressName.textContent = names[index];
 
-        // Set color based on conditions
+        // Set status text based on percentage
         if (percentage >= 90) {
             progressBar.style.backgroundColor = '#57ae2b';
+            statusText.textContent = "Finalizing";
         } else if (percentage >= 70) {
             progressBar.style.backgroundColor = '#5d31aa';
+            statusText.textContent = "Distribution In-Progress";
         } else if (percentage >= 60) {
             progressBar.style.backgroundColor = '#46c7c3';
+            statusText.textContent = "Artwork/MV In-Progress";
         } else if (percentage >= 50) {
             progressBar.style.backgroundColor = '#5e5e5e';
+            statusText.textContent = "Results Out (check email) | expires/updates in 5 days";
         } else if (percentage >= 40) {
             progressBar.style.backgroundColor = '#bdb50f';
+            statusText.textContent = "Review Done";
         } else if (percentage >= 20) {
             progressBar.style.backgroundColor = '#0f4fbd';
+            statusText.textContent = "Review In-Progress";
         } else {
             progressBar.style.backgroundColor = '#212121'; // Default color if less than 20%
+            statusText.textContent = "Review Pending";
         }
     });
 }
-
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    }
-  });
-}
-
-
 
 function openModal() {
     const modal = document.getElementById("myModal");

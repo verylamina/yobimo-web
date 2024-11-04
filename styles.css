@@ -516,6 +516,21 @@ a {
     margin: 3%;
 }
 
+.statusTexts {
+    position: center;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 15px;
+    color: white;
+
+    margin: auto;
+    max-width: 70%;
+    background-color: #0000007a;
+
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 9px;
+}
+
 #entryText1, #entryText2, #entryText3, #entryText4 {
     font-family: Montserrat;
     text-align: center;
